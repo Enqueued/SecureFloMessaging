@@ -17,7 +17,7 @@ public class Constants {
     public static final String APP_SECRET = "5b6e90d8e8064e789aa908b8fc256438";
 
     //URL's to be used to access the API
-    public static final String END_POINT = "http://www.galadriel.cs.utsa.edu/group2/public_html/api";
+    public static final String END_POINT = "http://galadriel.cs.utsa.edu/~group2/api";
     public static final String LOGIN_URL =  END_POINT + "/login.php";
     public static final String INFO_URL = END_POINT + "/info.php";
     public static final String UPDATE_URL = END_POINT + "/update.php";

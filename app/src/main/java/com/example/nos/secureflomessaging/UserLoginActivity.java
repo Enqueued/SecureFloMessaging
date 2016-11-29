@@ -121,6 +121,7 @@ public class UserLoginActivity extends AppCompatActivity {
                 if(mIsLogin){
                     User user = new User();
                     user.setId(obj.optLong(Constants.ID));
+                    user.setUser(contentValues.getAsString(Constants.USERNAME));
                     user.setPassword(contentValues.getAsString(Constants.PASSWORD));
                     RESTServiceApplication.getInstance().setUser(user);
                     RESTServiceApplication.getInstance().setAccessToken(
@@ -137,7 +138,7 @@ public class UserLoginActivity extends AppCompatActivity {
 
         @Override
         public void performSuccessfulOperation() {
-            Intent intent = new Intent(UserLoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(UserLoginActivity.this, Inbox.class);
         }
     }
 }

@@ -6,6 +6,8 @@ package com.example.nos.secureflomessaging.data;
 
 public class User {
     private long id;
+    private String password;
+    private String user;
 
     public long getId() {
         return id;
@@ -19,9 +21,14 @@ public class User {
         return password;
     }
 
+    public String getUser() {
+        return user;
+    }
+
     public void setPassword(String password) {
         this.password = password;
     }
-
-    private String password;
+    public void setUser(String user) {
+        this.user = user;
+    }
 }

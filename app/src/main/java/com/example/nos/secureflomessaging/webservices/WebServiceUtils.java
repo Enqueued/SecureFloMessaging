@@ -69,7 +69,7 @@ public class WebServiceUtils {
             if(headerValues != null){
                 Uri.Builder builder = new Uri.Builder();
                 for(String key: headerValues.keySet()){
-                   builder.appendQueryParameter(key, headerValues.getAsString(key));
+                    builder.appendQueryParameter(key, headerValues.getAsString(key));
                 }
                 String query = builder.build().getEncodedQuery();
                 OutputStream os = urlConnection.getOutputStream();
@@ -150,7 +150,7 @@ public class WebServiceUtils {
 
     private static void addBasicAuthentication(HttpURLConnection urlConnection){
         final String basicAuth = "Basic " + Base64.encodeToString((Constants.APP_KEY +
-            ":" + Constants.APP_SECRET).getBytes(), Base64.NO_WRAP);
+                ":" + Constants.APP_SECRET).getBytes(), Base64.NO_WRAP);
         urlConnection.setRequestProperty(Constants.AUTHORIZATION, basicAuth);
     }
 
